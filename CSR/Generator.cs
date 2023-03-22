@@ -31,7 +31,7 @@ namespace CSR
             x_n += C;
             for (int i = 0; i < InitialVar.Length - 1; i++)
                 InitialVar[i] = InitialVar[i + 1];
-            InitialVar[InitialVar.Length] = x_n;
+            InitialVar[InitialVar.Length-1] = x_n;
             return x_n.GetToBinary();
         }
     }

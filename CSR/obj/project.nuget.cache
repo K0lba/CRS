@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "/X1KKnq541yGFXE4SgVFNq8diEJx2nibOQZdt7RWrDTYD/gmFlmYOcXl7YbnmutEZTawCHiQb09um7L9dPjJ4w==",
+  "dgSpecHash": "5ZYqggbEeSxDrz4OTpsbD5x/B7XXZU31WBsukkMQoxAFcL9iOdxZ0G4T3IA6Wp+qX18Y+dt5cfoWSY+xt8baUQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\aruds\\Source\\Repos\\CSR\\CSR\\CSR.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\aruds\\source\\repos\\CSR\\CSR\\CSR.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\aruds\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\aruds\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
+    "C:\\Users\\aruds\\.nuget\\packages\\nunit\\3.13.3\\nunit.3.13.3.nupkg.sha512"
+  ],
   "logs": []
 }
