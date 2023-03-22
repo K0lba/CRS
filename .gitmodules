@@ -1,3 +1,3 @@
-[submodule "CSR/FiniteFields"]
-	path = CSR/FiniteFields
+[submodule "FiniteFields"]
+	path = FiniteFields
 	url = https://github.com/K0lba/FiniteFields
