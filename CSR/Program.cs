@@ -1,4 +1,5 @@
 ﻿using FiniteFields;
+using NUnit.Framework;
 
 namespace CSR
 {
