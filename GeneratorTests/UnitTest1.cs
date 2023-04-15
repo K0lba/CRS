@@ -8,26 +8,26 @@ namespace GeneratorTests
         [Test]
         public void Generate1()
         {
-            List<byte[]> coef = new List<byte[]> { new byte[]{ 2, 0, 0, 0 }, new byte[] { 3, 0, 0, 0 } };
-            byte[] absVal = new byte[] { 0, 0, 0, 0 };
-            List<byte[]> initVal = new List<byte[]> { new byte[] { 0, 0, 0, 0 }, new byte[] { 1, 0, 0, 0 } };
+            List<byte> coef = new List<byte> { 2, 3};
+            byte absVal = 0;
+            List<byte> initVal = new List<byte> { 0, 1 };
 
             var generator = new Generator(absVal, coef, initVal);
-            var expect = new List<byte[]> { new byte[] { 3, 0, 0, 0 }, new byte[] { 7, 0, 0, 0 }, new byte[] { 15, 0, 0, 0 }, new byte[] { 31, 0, 0, 0 } };
-            var result = new List<byte[]> { generator.Generate(), generator.Generate(), generator.Generate(), generator.Generate() };
+            var expect = new List<byte> { 3, 7, 15, 31 };
+            var result = new List<byte> { generator.Generate(), generator.Generate(), generator.Generate(), generator.Generate() };
             Assert.That(result, Is.EqualTo(expect));
         }
 
         [Test]
         public void ZeroTest1()
         {
-            List<byte[]> coef = new List<byte[]> { new byte[] { 2, 0, 0, 0 }, new byte[] { 3, 0, 0, 0 }, new byte[] { 4, 0, 0, 0 } };
-            byte[] absVal = new byte[] { 0, 0, 0, 0 };
-            List<byte[]> initVal = new List<byte[]> { new byte[] { 0, 0, 0, 0 }, new byte[] { 0, 0, 0, 0 }, new byte[] { 0, 0, 0, 0 } };
+            List<byte> coef = new List<byte> { 2, 3, 2 };
+            byte absVal = 0;
+            List<byte> initVal = new List<byte> { 0, 0, 0 };
 
             var generator = new Generator(absVal, coef, initVal);
-            var expect = new List<byte[]> { new byte[] { 0, 0, 0, 0 }, new byte[] { 0, 0, 0, 0 }, new byte[] { 0, 0, 0, 0 }, new byte[] { 0, 0, 0, 0 } };
-            var result = new List<byte[]> { generator.Generate(), generator.Generate(), generator.Generate(), generator.Generate() };
+            var expect = new List<byte> { 0, 0, 0, 0 };
+            var result = new List<byte> { generator.Generate(), generator.Generate(), generator.Generate(), generator.Generate() };
 
             Assert.That(result, Is.EqualTo(expect));
         }
@@ -35,13 +35,13 @@ namespace GeneratorTests
         [Test]
         public void OneTest1()
         {
-            List<byte[]> coef = new List<byte[]> { new byte[] { 1, 0, 0, 0 }, new byte[] { 1, 0, 0, 0 } };
-            byte[] absVal = new byte[] { 1, 0, 0, 0 };
-            List<byte[]> initVal = new List<byte[]> { new byte[] { 1, 0, 0, 0 }, new byte[] { 1, 0, 0, 0 } };
+            List<byte> coef = new List<byte> { 1, 1 };
+            byte absVal = 1;
+            List<byte> initVal = new List<byte> { 1, 1 };
 
             var generator = new Generator(absVal, coef, initVal);
-            var expect = new List<byte[]> { new byte[] { 1, 0, 0, 0 }, new byte[] { 1, 0, 0, 0 }, new byte[] { 1, 0, 0, 0 }, new byte[] { 1, 0, 0, 0 } };
-            var result = new List<byte[]> { generator.Generate(), generator.Generate(), generator.Generate(), generator.Generate() };
+            var expect = new List<byte> { 1, 1, 1, 1 };
+            var result = new List<byte> { generator.Generate(), generator.Generate(), generator.Generate(), generator.Generate() };
 
             Assert.That(result, Is.EqualTo(expect));
         }
@@ -49,39 +49,39 @@ namespace GeneratorTests
         [Test]
         public void Generate2()
         {
-            List<byte[]> coef = new List<byte[]> { new byte[] { 1, 0, 0, 0 }, new byte[] { 3, 0, 0, 0 }, new byte[] { 2, 0, 0, 0 } };
-            byte[] absVal = new byte[] { 2, 0, 0, 0 };
-            List<byte[]> initVal = new List<byte[]> { new byte[] { 2, 0, 0, 0 }, new byte[] { 2, 0, 0, 0 }, new byte[] { 1, 0, 0, 0 } };
+            List<byte> coef = new List<byte> { 1, 3, 1 };
+            byte absVal = 2;
+            List<byte> initVal = new List<byte> { 2, 2, 2 };
 
             var generator = new Generator(absVal, coef, initVal);
-            var expect = new List<byte[]> { new byte[] { 4, 0, 0, 0 }, new byte[] { 11, 0, 0, 0 }, new byte[] { 25, 0, 0, 0 }, new byte[] { 41, 0, 0, 0 } };
-            var result = new List<byte[]> { generator.Generate(), generator.Generate(), generator.Generate(), generator.Generate() };
+            var expect = new List<byte> { 4, 11, 25, 41 };
+            var result = new List<byte> { generator.Generate(), generator.Generate(), generator.Generate(), generator.Generate() };
             Assert.That(result, Is.EqualTo(expect));
         }
 
         [Test]
         public void Generate3()
         {
-            List<byte[]> coef = new List<byte[]> { new byte[] { 1, 0, 0, 0 }, new byte[] { 1, 0, 0, 0 } };
-            byte[] absVal = new byte[] { 4, 0, 0, 0 };
-            List<byte[]> initVal = new List<byte[]> { new byte[] { 1, 0, 0, 0 }, new byte[] { 1, 0, 0, 0 }};
+            List<byte> coef = new List<byte> { 1, 1 };
+            byte absVal = 4;
+            List<byte> initVal = new List<byte> { 1, 1 };
 
             var generator = new Generator(absVal, coef, initVal);
-            var expect = new List<byte[]> { new byte[] { 4, 0, 0, 0 }, new byte[] { 1, 0, 0, 0 }, new byte[] { 1, 0, 0, 0 }, new byte[] { 4, 0, 0, 0 } };
-            var result = new List<byte[]> { generator.Generate(), generator.Generate(), generator.Generate(), generator.Generate() };
+            var expect = new List<byte> { 4, 1, 4 };
+            var result = new List<byte> { generator.Generate(), generator.Generate(), generator.Generate(), generator.Generate() };
             Assert.That(result, Is.EqualTo(expect));
         }
 
         [Test]
         public void Generate4()
         {
-            List<byte[]> coef = new List<byte[]> { new byte[] { 1, 0, 0, 0 }, new byte[] { 0, 0, 0, 0 }, new byte[] { 1, 0, 0, 0 } };
-            byte[] absVal = new byte[] { 4, 0, 0, 0 };
-            List<byte[]> initVal = new List<byte[]> { new byte[] { 2, 0, 0, 0 }, new byte[] { 1, 0, 0, 0 }, new byte[] { 2, 0, 0, 0 } };
+            List<byte> coef = new List<byte> { 1, 0, 1 };
+            byte absVal = 4;
+            List<byte> initVal = new List<byte> { 2, 1, 2 };
 
             var generator = new Generator(absVal, coef, initVal);
-            var expect = new List<byte[]> { new byte[] { 4, 0, 0, 0 }, new byte[] { 1, 0, 0, 0 }, new byte[] { 7, 0, 0, 0 }, new byte[] { 7, 0, 0, 0 } };
-            var result = new List<byte[]> { generator.Generate(), generator.Generate(), generator.Generate(), generator.Generate() };
+            var expect = new List<byte> { 4, 1, 4 };
+            var result = new List<byte> { generator.Generate(), generator.Generate(), generator.Generate(), generator.Generate() };
             Assert.That(result, Is.EqualTo(expect));
         }
     }
