@@ -1,6 +1,6 @@
 ﻿using FiniteFields;
 
-namespace CSR
+namespace CRS
 {
     public class Generator
     {

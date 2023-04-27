@@ -1,4 +1,4 @@
-using CSR;
+using CRS;
 using System.Runtime.ConstrainedExecution;
 
 namespace GeneratorTests
@@ -49,9 +49,9 @@ namespace GeneratorTests
         [Test]
         public void Generate2()
         {
-            List<byte> coef = new List<byte> { 1, 3, 1 };
+            List<byte> coef = new List<byte> { 1, 3, 2 };
             byte absVal = 2;
-            List<byte> initVal = new List<byte> { 2, 2, 2 };
+            List<byte> initVal = new List<byte> { 2, 2, 1 };
 
             var generator = new Generator(absVal, coef, initVal);
             var expect = new List<byte> { 4, 11, 25, 41 };
@@ -67,7 +67,7 @@ namespace GeneratorTests
             List<byte> initVal = new List<byte> { 1, 1 };
 
             var generator = new Generator(absVal, coef, initVal);
-            var expect = new List<byte> { 4, 1, 4 };
+            var expect = new List<byte> { 4, 1, 1, 4 };
             var result = new List<byte> { generator.Generate(), generator.Generate(), generator.Generate(), generator.Generate() };
             Assert.That(result, Is.EqualTo(expect));
         }
@@ -80,7 +80,7 @@ namespace GeneratorTests
             List<byte> initVal = new List<byte> { 2, 1, 2 };
 
             var generator = new Generator(absVal, coef, initVal);
-            var expect = new List<byte> { 4, 1, 4 };
+            var expect = new List<byte> { 4, 1, 7, 7 };
             var result = new List<byte> { generator.Generate(), generator.Generate(), generator.Generate(), generator.Generate() };
             Assert.That(result, Is.EqualTo(expect));
         }

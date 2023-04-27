@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSR", "CSR\CSR.csproj", "{F468E1C4-D88D-45A8-B6CA-B1462A819369}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CRS", "CRS\CRS.csproj", "{F468E1C4-D88D-45A8-B6CA-B1462A819369}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeneratorTests", "GeneratorTests\GeneratorTests.csproj", "{7DD9B152-B0E5-4900-AAC6-BFDC47F2B771}"
 EndProject
